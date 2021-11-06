@@ -24,7 +24,7 @@ class StudentFactory extends Factory
         return [
             'student_last_name' => $this->faker->lastName,
             'student_first_name' => $this->faker->firstName,
-            'student_school' => $this->faker->state,
+            'student_school' => $this->faker->randomElement($array = array ('麻布','開成','巣鴨', '武蔵', '広尾')),
             'student_grade' => $this->faker->numberBetween($min = 0, $max = 12),     
             'student_status' => $this->faker->numberBetween($min = 0, $max = 3), 
         ];

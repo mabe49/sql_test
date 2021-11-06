@@ -23,7 +23,8 @@ class BoothFactory extends Factory
     {
         return [
             'teacher_id' => $this->faker->numberBetween($min = 1, $max = 15),
-            'section_id' => $this->faker->numberBetween($min = 1, $max = 90), //ふたつでuniquしたい
+            'section_id' => $this->faker->numberBetween($min = 1, $max = 3),
+            'day_id' => $this->faker->numberBetween($min = 1, $max = 30),
         ];
     }
 }

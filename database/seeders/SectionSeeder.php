@@ -14,24 +14,19 @@ class SectionSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i <= 30; $i ++) { 
             DB::table('sections')->insert([
                 [
-                    'day_id' => $i,
                     'start_section' => '17:00',
                     'end_section' => '18:20',
                 ],
                 [
-                    'day_id' => $i,
                     'start_section' => '18:30',
                     'end_section' => '19:50',
                 ],
                 [
-                    'day_id' => $i,
                     'start_section' => '20:00',
                     'end_section' => '21:20',
                 ],
             ]);
-        }
     }
 }

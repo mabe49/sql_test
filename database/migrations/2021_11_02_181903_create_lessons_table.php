@@ -17,8 +17,9 @@ class CreateLessonsTable extends Migration
             $table->id();
             $table->foreignId('course_id');            
             $table->foreignId('booth_id');
-            $table->integer('lesson_status'); 
             $table->timestamps();
+
+            $table->unique(['course_id', 'booth_id']);
         });
     }
 

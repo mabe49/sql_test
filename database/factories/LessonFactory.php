@@ -22,9 +22,8 @@ class LessonFactory extends Factory
     public function definition()
     {
         return [
-            'course_id' => $this->faker->numberBetween($min = 1, $max = 200),
+            'course_id' => $this->faker->unique()->numberBetween($min = 1, $max = 1000),
             'booth_id' => $this->faker->numberBetween($min = 1, $max = 1350),
-            'lesson_status' => $this->faker->numberBetween($min = 1, $max = 3),
         ];
     }
 }

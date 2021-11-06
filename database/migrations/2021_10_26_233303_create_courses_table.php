@@ -17,10 +17,10 @@ class CreateCoursesTable extends Migration
             $table->id();
             $table->foreignId('student_id')->constrained();
             $table->foreignId('subject_id')->constrained();
-            $table->integer('class_format');
+            $table->integer('course_format');
             $table->integer('course_year');            
-            $table->integer('course_section'); //yearとsectionの組み合わせをユニークにしたい
-            $table->integer('course_quantity');           
+            $table->integer('course_section');
+            $table->integer('course_status');    
             $table->timestamps();
         });
     }

@@ -26,10 +26,10 @@ class CourseFactory extends Factory
         return [
             'student_id' => $this->faker->numberBetween($min = 1, $max = 50),
             'subject_id' => $this->faker->numberBetween($min = 1, $max = 5),
-            'class_format' => $this->faker->numberBetween($min = 0, $max = 3),
+            'course_format' => $this->faker->numberBetween($min = 0, $max = 3),
             'course_year' => 2021,            
             'course_section' => $this->faker->numberBetween($min = 1, $max = 16), //yearとsectionの組み合わせをユニークにしたい/春：13、夏：14、冬：15、増コマ：16
-            'course_quantity' => $this->faker->numberBetween($min = 1, $max = 12),
+            'course_status' => $this->faker->numberBetween($min = 1, $max = 3),
         ];
     }
 }

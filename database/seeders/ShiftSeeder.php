@@ -15,16 +15,19 @@ class ShiftSeeder extends Seeder
     public function run()
     {
         for($i = 1;$i <= 15; $i ++){
-            for($j = 1;$j <= 90; $j ++){
-                DB::table('shifts')->insert([
-                    [
-                    'teacher_id' => $i,
-                    'section_id' => $j,
-                    'is_attendance' => ($i+$j)%2,
-                    ]
-                ]);
+            for($j = 1;$j <= 3; $j ++){
+                for($k = 1;$k <= 30; $k ++){
+                    DB::table('shifts')->insert([
+                        [
+                        'teacher_id' => $i,
+                        'section_id' => $j,
+                        'day_id' => $k,
+                        'is_attendance' => ($i+$j+$k)%2,
+                        ]
+                    ]);
+                } 
             }
-            
         }
+
     }
 }

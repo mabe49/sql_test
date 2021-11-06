@@ -17,6 +17,7 @@ class CreateShiftsTable extends Migration
             $table->id();
             $table->foreignId('teacher_id');
             $table->foreignId('section_id');
+            $table->foreignId('day_id');
             $table->boolean('is_attendance');
             $table->timestamps();
         });
